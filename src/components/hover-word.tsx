@@ -7,7 +7,10 @@ export const HoverWord = forwardRef<
 >(({ className, ...props }, ref) => (
   <span
     ref={ref}
-    className={cn("select-none hover:text-red-500", className)}
+    className={cn(
+      "select-none transition-all hover:text-yellow-500",
+      className,
+    )}
     {...props}
   />
 ));

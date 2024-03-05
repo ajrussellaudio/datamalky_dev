@@ -5,6 +5,8 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const fontSerif = FontSerif({
   subsets: ["latin"],
@@ -29,8 +31,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <body className={cn("h-full", fontSerif.variable, fontSans.variable)}>
-        {children}
+      <body className={cn("h-full p-4", fontSerif.variable, fontSans.variable)}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <ThemeToggle />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
