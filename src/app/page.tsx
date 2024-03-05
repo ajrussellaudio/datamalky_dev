@@ -1,4 +1,10 @@
 import {
+  DefinitionDetails,
+  DefinitionList,
+  DefinitionTitle,
+} from "@/components/definition";
+import { HoverWord } from "@/components/hover-word";
+import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
@@ -12,34 +18,42 @@ export default function Home() {
         <h1 className="text-6xl">
           <Tooltip>
             <TooltipTrigger asChild>
-              <span className="hover:text-red-500">data</span>
+              <HoverWord>data</HoverWord>
             </TooltipTrigger>
             <TooltipContent>
-              <dl className="font-serif">
-                <dt className="font-bold text-xl">data</dt>
-                <dd>
-                  (collectively, uncountable) Information, especially in a
-                  scientific or computational context, or with the implication
-                  that it is organized.
-                </dd>
-                <dd>
-                  (computing) A representation of facts or ideas in a formalized
-                  manner capable of being communicated or manipulated by some
-                  process.
-                </dd>
-              </dl>
+              <DefinitionList>
+                <DefinitionTitle>
+                  <strong>data</strong> <em>(n, pl)</em>
+                </DefinitionTitle>
+                <DefinitionDetails>
+                  <em>(collectively, uncountable)</em> Information, especially
+                  in a scientific or computational context, or with the
+                  implication that it is organized.
+                </DefinitionDetails>
+                <DefinitionDetails>
+                  <em>(computing)</em> A representation of facts or ideas in a
+                  formalized manner capable of being communicated or manipulated
+                  by some process.
+                </DefinitionDetails>
+              </DefinitionList>
             </TooltipContent>
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
-              <span className="hover:text-red-500">malky</span>
+              <HoverWord>malky</HoverWord>
             </TooltipTrigger>
             <TooltipContent>
-              <dl className="font-serif">
-                <dt className="font-bold text-xl">malky</dt>
-                <dd>(Scottish, slang) To physically assault</dd>
-                <dd>(Scottish, slang) To murder</dd>
-              </dl>
+              <DefinitionList>
+                <DefinitionTitle>
+                  <strong>malky</strong> <em>(v)</em>
+                </DefinitionTitle>
+                <DefinitionDetails>
+                  <em>(Scottish, slang)</em> To physically assault
+                </DefinitionDetails>
+                <DefinitionDetails>
+                  <em>(Scottish, slang)</em> To murder
+                </DefinitionDetails>
+              </DefinitionList>
             </TooltipContent>
           </Tooltip>
         </h1>
