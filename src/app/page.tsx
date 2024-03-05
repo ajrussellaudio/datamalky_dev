@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <main className="h-full grid place-items-center">
       <TooltipProvider>
-        <h1 className="text-9xl">
+        <h1 className="text-9xl tracking-tighter">
           <Tooltip>
             <TooltipTrigger asChild>
               <HoverWord>data</HoverWord>

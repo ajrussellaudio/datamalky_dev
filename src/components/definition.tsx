@@ -5,7 +5,11 @@ export const DefinitionList = forwardRef<
   HTMLDListElement,
   HTMLProps<HTMLDListElement>
 >(({ className, ...props }, ref) => (
-  <dl ref={ref} className={cn("font-serif max-w-2xl", className)} {...props} />
+  <dl
+    ref={ref}
+    className={cn("font-serif max-w-2xl tracking-wide", className)}
+    {...props}
+  />
 ));
 DefinitionList.displayName = "DefinitionList";
 
