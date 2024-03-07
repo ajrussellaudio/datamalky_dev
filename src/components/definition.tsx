@@ -17,7 +17,7 @@ export const DefinitionTitle = forwardRef<
   HTMLLIElement,
   HTMLProps<HTMLLIElement>
 >(({ className, ...props }, ref) => (
-  <dt ref={ref} className={cn("text-xl", className)} {...props} />
+  <dt ref={ref} className={cn("text-xl mt-2", className)} {...props} />
 ));
 DefinitionTitle.displayName = "DefinitionTitle";
 
