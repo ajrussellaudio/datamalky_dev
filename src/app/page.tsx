@@ -6,9 +6,12 @@ import {
 
 export default function Home() {
   return (
-    <main className="h-full grid place-items-center">
-      <h1 className="sr-only">Datamalky</h1>
-      <DefinitionList>
+    <main className="h-full flex flex-col justify-center gap-4">
+      <h1 className="mx-auto text-7xl font-sans md:text-9xl">
+        <span className="text-white">data</span>
+        <span className="text-yellow-300">malky</span>
+      </h1>
+      <DefinitionList className="mx-auto">
         <DefinitionTitle>
           <strong>data</strong> <em>(n, pl)</em>
         </DefinitionTitle>
